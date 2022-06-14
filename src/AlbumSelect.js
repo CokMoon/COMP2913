@@ -1,9 +1,8 @@
-function AlbumSelect(props) {
+function AlbumSelect({ coverImg, name, onSelect }) {
   const style = { borderRadius: "60px", height: "60px", width: "60px" };
-  const { coverImg, name } = props;
 
   return (
-    <div>
+    <div onClick={onSelect}>
       <img style={style} src={coverImg} alt={name} />
       <span>{name}</span>
     </div>
